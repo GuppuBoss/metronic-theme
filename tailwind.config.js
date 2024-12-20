@@ -1,4 +1,6 @@
-export default {
+/** @type {import('tailwindcss').Config} */
+
+module.exports = {
   content: ['index.html', './src/**/*.{ts,tsx}'],
   safelist: [
     'demo1',

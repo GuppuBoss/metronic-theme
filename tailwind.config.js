@@ -1,4 +1,6 @@
-module.exports = {
+/*eslint-env node*/
+
+export default {
   content: ['index.html', './src/**/*.{ts,tsx}'],
   safelist: [
     'demo1',

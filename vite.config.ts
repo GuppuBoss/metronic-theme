@@ -8,6 +8,13 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [tailwindcss()]
+    },
+    devSourcemap: false,
+    // Add this to silence CSS warnings
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true
+      }
     }
   },
   base: '/',
@@ -18,8 +25,9 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 3000,
-    commonjsOptions: {
-      transformMixedEsModules: true
-    }
+    // Add these options to ignore warnings
+    reportCompressedSize: false,
+    cssCodeSplit: false,
+    minify: false
   }
 });
